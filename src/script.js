@@ -25,19 +25,16 @@ getDataMovie(
     const dataResult = resultParsing.Search;
     dataResult.forEach((data) => {
       cardWrapper.innerHTML += `<div
-        class="flex flex-col border shadow-sm rounded-2xl drop-shadow-xl bg-slate-900 border-gray-700 shadow-slate-700/[.7] max-w-72"
+        class="flex flex-col border shadow-sm rounded-2xl drop-shadow-2xl bg-slate-900 border-gray-700 shadow-slate-700/[.7] w-72 hover:scale-105 hover:transition hover:ease-in-out hover:border-green-800 "
       >
-      <div class="rounded-2xl bg-slate-200">
-        <img
-            class="w-full rounded-t-2xl"
-            src="${data.Poster}"
-            alt="Image Description"
-        />
+      <div class="rounded-t-2xl h-80 bg-slate-200" style="background-image: url(${data.Poster})">
       </div>
         <div class="p-4 md:p-5">
-          <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+        <div class="h-[85px] ">
+            <h3 class="text-lg font-bold text-gray-800 dark:text-white">
             ${data.Title}
-          </h3>
+            </h3>
+        </div>
           <p class="mt-1 text-gray-500 dark:text-gray-400">
             ${data.Year}
           </p>
