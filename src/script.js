@@ -15,8 +15,10 @@ function getDataMovie(url, succes, error) {
   xhr.send();
 }
 
+const movie = prompt('Masukkan Film yang ingin dicari: ')
+
 getDataMovie(
-  "http://www.omdbapi.com/?apikey=dca61bcc&s=naruto",
+  "http://www.omdbapi.com/?apikey=dca61bcc&s=" + movie,
   (results) => {
     // console.log(JSON.parse(results));
     // olah hasilnya
